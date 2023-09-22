@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Museum</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Montserrat:wght@100;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar close">
+            <header>
+                <img class="toggle" src="images/baseline-keyboard_arrow_right-24px.png" alt="">
+            </header>
+
+            <div class="menubar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#">
+                        <img class="icon" src="images/172480_home_icon.png" alt="">
+                       <span class="nav-link">Галлерея</span> 
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#">
+                        <img class="icon" src="images/3586366_group_people_person_icon.png" alt="">
+                       <span class="nav-link">Про нас</span> 
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#">
+                        <img class="icon" src="images/3586361_location_map_navigation_pointer_icon.png" alt="">
+                       <span class="nav-link">Вистави</span> 
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#">
+                        <img class="icon" src="images/3586360_email_envelope_mail_send_icon.png" alt="">
+                        <span class="nav-link">Контакти</span> 
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="separator"></div>
+
+            <div class="schedule">
+                <div class="list">
+                    <li class="nav-item">
+                        <h class="text">
+                            12:00 — 20:00 середа<br>
+                            12:00 — 20:00 четвер<br>
+                            12:00 — 20:00 п’ятниця<br>
+                            11:00 — 19:00 субота<br>
+                            11:00 — 19:00 неділя<br>
+                        </h>
+                    </li>
+                </div>
+
+                <div class="info">
+                    <li class="nav-item">
+                        <h class="text">
+                            Вихідні: понеділок, вівторок<br>
+                            Каса припиняє роботу за 1 годину<br>
+                            до закриття музею
+                        </h>
+                    </li>
+                </div>
+            </div>
+        </div>
+        </nav>
+        
+        <div class="image-cont"><img src="images/Natsionalnij-hudozhnij-muzej-Ukrayini-Kiyiv-10-1800x1200.png" alt="">
+        </div>
+        <div class="NaMu">Na<br>Mu</div>
+        <h1 class="intro">ХУДОЖНІЙ <br> МУЗЕЙ</h1>
+       
+        <button onmouseover = "changeItem()" onmouseout="rechangeItem()" class="button-cont" id = "button-cont">
+            <h1 class="hsq">
+                Квитки
+            </h1>
+            <div id = "square" class="square">
+                <img class="imgsq" src="images/baseline-keyboard_arrow_right-24px.png" alt="">
+            </div>
+        </button>
+
+
+    </div>
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar");
+
+        toggle.addEventListener("click", () => {
+            navbar.classList.toggle("close");
+        });
+
+        function changeItem() {
+            document.getElementById('square').style.background = '#fff';
+            document.getElementById('button-cont').style.background = '#1A5A4C'; 
+            document.getElementById('button-cont').style.color = '#fff'; 
+            
+        }
+        function rechangeItem() {
+            document.getElementById('square').style.background = '#1A5A4C';
+            document.getElementById('button-cont').style.background = '#fff'; 
+            document.getElementById('button-cont').style.color = '#000'; 
+        }
+
+    </script>
+
+    <script scr="script.js"></script>
+</body>
+
+</html>
